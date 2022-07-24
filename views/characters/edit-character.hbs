@@ -1,0 +1,30 @@
+<h2>Edit Character</h2>
+<form action="/characters/edit/:id" method="post">
+
+<div>
+    <label for="myName">Name</label>
+    <input id="myName" type="text" name="name" value="{{character.name}}">
+</div>
+
+<div>
+    <label for="myOccupation">Occupation</label>
+    <input id="myuOccupation" type="text" name="occupation" value="{{character.occupation}}">
+</div>
+
+<div>
+    <label for="myWeapon">Weapon</label>
+    <input id="myWeapon" type="text" name="weapon" value="{{character.weapon}}">
+</div>
+
+<div>
+    <label for="myDebt">Debt</label>
+  {{#if character.debt}}  
+    <input id="myDebt" type="checkbox" name="debt" value="true">
+  {{else}}
+    <input id="myDebt" type="checkbox" name="debt" value="false">
+  {{/if}}
+</div>
+
+<button type="submit">Edit!</button>
+
+</form>
